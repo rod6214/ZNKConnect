@@ -1,8 +1,8 @@
 import React from 'react';
-import WSlideShow from '../SlideShows/WSlideShow';
-import PictureMosaicPane from '../Sections/PictureMosaic';
-import ToadsTracker from '../Sections/ToadsTracker';
-import WForm from '../Controls/WForm/WForm';
+import WSlideShow from '../../Components/SlideShows/WSlideShow';
+import PictureMosaicPane from '../../Components/Sections/PictureMosaic';
+import ToadsTracker from '../../Components/Sections/ToadsTracker';
+import WForm from '../../Components/Controls/WForm/WForm';
 
 class SectionPane extends React.Component {
     render(): JSX.Element {
