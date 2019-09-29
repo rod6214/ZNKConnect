@@ -1,6 +1,7 @@
 import React from 'react';
 
 class WModal extends React.Component {
+    public hello() {}
     render(): React.ReactNode {
         return (
             <div id="ticketModal" className="w3-modal">

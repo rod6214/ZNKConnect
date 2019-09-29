@@ -55,7 +55,7 @@ class WSlideShow extends React.Component {
         const toadObject = this.props.slideItems.map((item, index) => {
             return (
                 <div key={index} ref={this._slideContent} className="mySlides w3-display-container w3-center">
-                    <img src={item.imgSrc} style={{width:'100%'}}/>
+                    <img src={item.imgSrc} style={{width:'100%'}} alt="toad"/>
                     <div className="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
                         <h3>{item.title}</h3>
                         <p><b>{item.description}</b></p>    
