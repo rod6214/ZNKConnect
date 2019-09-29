@@ -1,6 +1,7 @@
 import React from 'react';
 import WNavbar from '../Components/Navbar/WNavbar';
 import SectionPane from '../Components/SectionPane/SectionPane';
+import WFooter from '../Components/Controls/WFooter/WFooter';
 import './w3.css';
 import './lato.css';
 import './Content.css';
@@ -9,15 +10,11 @@ export class Content extends React.Component {
 
     render(): JSX.Element {
         return (
-            <div>
-                {/*navbar*/}
+            <div className="ntc-main-content">
                 <div className="ntc-navbar">
                     <WNavbar />
                 </div>
-                {/*sidebar*/}
-                {/* <div className="ntc-sidebar">sidebar</div> */}
-                {/*section*/}
-                <div className="ntc-main-content">
+                <div className="ntc-section">
                     <SectionPane />
                     {/* <!-- Ticket Modal --> */}
                     <div id="ticketModal" className="w3-modal">
@@ -38,22 +35,10 @@ export class Content extends React.Component {
                         </div>
                     </div>
                 </div>
-
-                {/*footet*/}
-                {/* <div className="ntc-footer">footer</div> */}
-                {/* <!-- Image of location/map --> */}
-                <img src="https://www.w3schools.com/w3images/map.jpg" className="w3-image w3-greyscale-min" style={{width:"100%"}}/>
-                {/* <!-- Footer --> */}
-                <footer className="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-                    <i className="fa fa-facebook-official w3-hover-opacity"></i>
-                    <i className="fa fa-instagram w3-hover-opacity"></i>
-                    <i className="fa fa-snapchat w3-hover-opacity"></i>
-                    <i className="fa fa-pinterest-p w3-hover-opacity"></i>
-                    <i className="fa fa-twitter w3-hover-opacity"></i>
-                    <i className="fa fa-linkedin w3-hover-opacity"></i>
-                    <p className="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-                </footer>
+                <div className="ntc-footer">
+                    <WFooter />
+                </div>
             </div>
-            );
+        );
     }
 }
