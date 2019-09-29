@@ -1,9 +1,9 @@
 import React from 'react';
+import WPropertyBase from '../../Interfaces/WPropertyBase';
 import './WSlideShow.css';
 
-export interface WSlideShowProperty {
+export interface WSlideShowProperty extends WPropertyBase {
     slideItems: ToadObject[];
-    children?: React.ReactNode[] | React.ReactNode;
 }
 
 export interface ToadObject {

@@ -19,7 +19,7 @@ export class Content extends React.Component {
                 {/*section*/}
                 <div className="ntc-main-content">
                     <SectionPane />
-                    {/*  */}
+                    {/*<!-- The Band Section -->*/}
                     <div className="w3-container w3-content w3-center w3-padding-64" style={{maxWidth:"800px"}} id="band">
                         <h2 className="w3-wide">THE BAND</h2>
                         <p className="w3-opacity"><i>We love music</i></p>
