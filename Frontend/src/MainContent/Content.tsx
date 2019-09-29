@@ -4,7 +4,7 @@ import Routes from '../RouteV1Config';
 import WFooter from '../Components/Controls/WFooter/WFooter';
 import WModal from '../Components/Controls/WModal/WModal';
 import { BrowserRouter as Router } from "react-router-dom";
-import { SharedControls } from '../Shared/SharedControls';
+import SharedControls from '../Shared/SharedControls';
 import './w3.css';
 import './lato.css';
 import './Content.css';

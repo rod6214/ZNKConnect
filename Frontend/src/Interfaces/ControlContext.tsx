@@ -1,7 +1,7 @@
 import WModal from '../Components/Controls/WModal/WModal';
 
-interface MainContext {
+interface ControlContext {
     modal?: WModal | null;
 }
 
-export default MainContext;
+export default ControlContext;
