@@ -17,7 +17,7 @@ class WModal extends React.Component {
                         <input className="w3-input w3-border" type="text" placeholder="Enter email" />
                         <button className="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i className="fa fa-check"></i></button>
                         <button className="w3-button w3-red w3-section">Close <i className="fa fa-remove"></i></button>
-                        <p className="w3-right">Need <a href="#" className="w3-text-blue">help?</a></p>
+                        <p className="w3-right">Need <a href="https://es.reactjs.org/docs/context.html" className="w3-text-blue">help?</a></p>
                     </div>
                 </div>
             </div>

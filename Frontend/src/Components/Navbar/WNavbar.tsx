@@ -18,12 +18,12 @@ class Navbar extends React.Component {
                     <div className="w3-dropdown-hover w3-hide-small">
                         <button className="w3-padding-large w3-button" title="More">MORE <i className="fa fa-caret-down"></i></button>     
                         <div className="w3-dropdown-content w3-bar-block w3-card-4">
-                            <a href="#" className="w3-bar-item w3-button">Merchandise</a>
-                            <a href="#" className="w3-bar-item w3-button">Extras</a>
-                            <a href="#" className="w3-bar-item w3-button">Media</a>
+                            <a href="https://es.reactjs.org/docs/context.html" className="w3-bar-item w3-button">Merchandise</a>
+                            <a href="https://es.reactjs.org/docs/context.html" className="w3-bar-item w3-button">Extras</a>
+                            <a href="https://es.reactjs.org/docs/context.html" className="w3-bar-item w3-button">Media</a>
                         </div>
                     </div>
-                    <a href="#" className="w3-padding-large w3-hover-red w3-hide-small w3-right">
+                    <a href="https://es.reactjs.org/docs/context.html" className="w3-padding-large w3-hover-red w3-hide-small w3-right">
                         <i className="fa fa-search"></i>
                     </a>
                 </div>

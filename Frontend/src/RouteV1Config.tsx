@@ -1,7 +1,6 @@
 import React from 'react';
 import Home from './Pages/Home/home';
 import Contact from './Pages/Contact/contact';
-import RouteConfigFunction from './Callbacks/RouteCallback';
 import { Route } from "react-router-dom";
 
 const ROUTES = [

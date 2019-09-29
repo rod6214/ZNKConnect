@@ -1,5 +1,4 @@
 import React from 'react';
-import WPropertyBase from '../../Interfaces/WPropertyBase';
 
 class ToadsTracker extends React.Component {
     render(): React.ReactNode {
