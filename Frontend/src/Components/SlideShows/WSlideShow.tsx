@@ -13,7 +13,6 @@ export interface ToadObject {
     imgSrc: string;
 }
 
-// TODO: Add properties to assign images and other type of controls
 class WSlideShow extends React.Component {
 
     private _slideAnimationHandle?: number;
