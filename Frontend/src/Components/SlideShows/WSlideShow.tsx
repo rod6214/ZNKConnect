@@ -17,7 +17,6 @@ export interface ToadObject {
 class WSlideShow extends React.Component {
 
     private _slideAnimationHandle?: number;
-    private _elements: React.ReactNode[] = [];
     private _slideContent?: React.RefObject<HTMLDivElement>;
     private _counter: number;
 
