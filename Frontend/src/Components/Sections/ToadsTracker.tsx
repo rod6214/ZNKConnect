@@ -25,7 +25,11 @@ class ToadsTracker extends React.Component {
                                             <p><b>New York</b></p>
                                             <p className="w3-opacity">Fri 27 Nov 2016</p>
                                             <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                            <button className="w3-button w3-black w3-margin-bottom">Buy Tickets</button>
+                                            <button className="w3-button w3-black w3-margin-bottom" onClick={()=>{
+                                                if (context.modal) {
+                                                    context.modal.show();
+                                                }
+                                            }}>Buy Tickets</button>
                                         </div>
                                     </div>
                                     <div className="w3-third w3-margin-bottom">
