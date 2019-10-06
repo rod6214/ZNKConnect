@@ -1,7 +1,4 @@
 import React from 'react';
-import WPropertyBase from '../../Interfaces/WPropertyBase';
-
-export interface PictureMosaicProperty extends WPropertyBase {} 
 
 class PictureMosaic extends React.Component {
     render(): React.ReactNode {
