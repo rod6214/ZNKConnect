@@ -1,6 +1,6 @@
 import React from 'react';
 import WToad from '../Controls/WToad/WToad';
-import SharedControls from '../../Shared/SharedControls';
+// import SharedControls from '../../Shared/SharedControls';
 import ToadsTrackerProperty from '../../Interfaces/ToadsTrackerProperty';
 
 class ToadsTracker extends React.Component {
@@ -11,30 +11,30 @@ class ToadsTracker extends React.Component {
 
     render(): React.ReactNode {
         return (
-            <SharedControls.Consumer>
-                {context => {
-                    return (
-                        <div className="w3-black" id="tour">
-                            <div className="w3-container w3-content w3-padding-64" style={{maxWidth:"800px"}}>
-                                <h2 className="w3-wide w3-center">TOUR DATES</h2>
-                                <p className="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br/>
+            <div className="w3-black" id="tour">
+                <div className="w3-container w3-content w3-padding-64" style={{maxWidth:"800px"}}>
+                    <h2 className="w3-wide w3-center">TOUR DATES</h2>
+                    <p className="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br/>
 
-                                <ul className="w3-ul w3-border w3-white w3-text-grey">
-                                    <li className="w3-padding">September <span className="w3-tag w3-red w3-margin-left">Sold out</span></li>
-                                    <li className="w3-padding">October <span className="w3-tag w3-red w3-margin-left">Sold out</span></li>
-                                    <li className="w3-padding">November <span className="w3-badge w3-right w3-margin-right">3</span></li>
-                                </ul>
+                    <ul className="w3-ul w3-border w3-white w3-text-grey">
+                        <li className="w3-padding">September <span className="w3-tag w3-red w3-margin-left">Sold out</span></li>
+                        <li className="w3-padding">October <span className="w3-tag w3-red w3-margin-left">Sold out</span></li>
+                        <li className="w3-padding">November <span className="w3-badge w3-right w3-margin-right">3</span></li>
+                    </ul>
 
-                                <div className="w3-row-padding w3-padding-32" style={{margin:"0 -16px"}}>
-                                    {this.props.toads!.map((toad, index) => (
-                                        <WToad key={index} title={toad.title} subtitle={toad.subtitle} description={toad.description} src={toad.src} buttonName={toad.buttonName}/>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                    );
-                }}
-            </SharedControls.Consumer>
+                    <div className="w3-row-padding w3-padding-32" style={{margin:"0 -16px"}}>
+                        {this.props.toads!.map((toad, index) => (
+                            <WToad key={index} 
+                                title={toad.title} 
+                                subtitle={toad.subtitle} 
+                                description={toad.description} 
+                                src={toad.src} 
+                                buttonName={toad.buttonName}
+                                onclick={toad.onclick}/>
+                        ))}
+                    </div>
+                </div>
+            </div>
         );
     }
 }

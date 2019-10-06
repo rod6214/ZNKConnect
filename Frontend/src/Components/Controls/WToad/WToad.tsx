@@ -3,10 +3,12 @@ import WToadProperty from '../../../Interfaces/WToadProperty';
 
 class WToad extends React.Component {
 
+    private _onclick?: () => void;
+
     constructor(public props: WToadProperty) {
         super(props);
         if (this.props.onclick) {
-            this.props.onclick = this.props.onclick.bind(this);
+            this._onclick = this.props.onclick.bind(this);
         }
     }
 
@@ -18,9 +20,10 @@ class WToad extends React.Component {
                     <p><b>{this.props.title}</b></p>
                     <p className="w3-opacity">{this.props.subtitle}</p>
                     <p>{this.props.description}</p>
-                    <button className="w3-button w3-black w3-margin-bottom" onClick={this.props.onclick}>{this.props.buttonName}</button>
+                    <button className="w3-button w3-black w3-margin-bottom" 
+                    onClick={this._onclick}>{this.props.buttonName}</button>
                 </div>
-        </div>          
+        </div>
         );
     }
 }
