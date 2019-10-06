@@ -1,31 +1,57 @@
 import React from 'react';
+import SectionPaneProperty from '../../Interfaces/SectionPaneProperty';
 import WSlideShow from '../SlideShows/WSlideShow';
-import PictureMosaicPane from './PictureMosaic';
+import PictureMosaic from './PictureMosaic';
 import ToadsTracker from './ToadsTracker';
 import WForm from '../Controls/WForm/WForm';
 
 class SectionPane extends React.Component {
+
+    private _slidehow?: WSlideShow;
+    private _pictureMosaic?: PictureMosaic;
+    private _toadsTracker?: ToadsTracker;
+    private _form?: WForm;
+
+    constructor(public props: SectionPaneProperty) {
+        super(props);
+    }
+
     render(): JSX.Element {
+        if (this.props.children) {
+            if (Array.isArray(this.props.children)) {
+                for (const component of this.props.children) {
+                    this._setComponent(component);
+                }
+            }
+            else {
+                this._setComponent(this.props.children);
+            }
+        }
         return (
         <div className="w3-content" style={{maxWidth:'2000px',marginTop:'46px'}}>
-            {/* <!-- Automatic Slideshow Images --> */}
-            <WSlideShow slideItems={[
-                {id: 0, title: "Los Angeles", description: "We had the best time playing at Venice Beach!", imgSrc: "https://www.w3schools.com/w3images/la.jpg"},
-                {id: 1, title: "New York", description: "The atmosphere in New York is lorem ipsum.", imgSrc: "https://www.w3schools.com/w3images/ny.jpg"},
-                {id: 2, title: "Chicago", description: "Thank you, Chicago - A night we won't forget.", imgSrc: "https://www.w3schools.com/w3images/chicago.jpg"}
-            ]} />
-            {/*<!-- The Band Section -->*/}
-            <PictureMosaicPane />
-            {/* <!-- The Tour Section --> */}
-            <ToadsTracker toads={[
-                {title: "New York", subtitle:"Fri 27 Nov 2016", src:"https://www.w3schools.com/w3images/newyork.jpg", onclick:() => {}, description: "Praesent tincidunt sed tellus ut rutrum sed vitae justo.", buttonName: "Buy Tickets"},
-                {title: "Paris", subtitle:"Sat 28 Nov 2016", src:"https://www.w3schools.com/w3images/paris.jpg", onclick:() => {}, description: "Praesent tincidunt sed tellus ut rutrum sed vitae justo.", buttonName: "Buy Tickets"},
-                {title: "San Francisco", subtitle:"Sun 29 Nov 2016", src:"https://www.w3schools.com/w3images/sanfran.jpg", onclick:() => {}, description: "Praesent tincidunt sed tellus ut rutrum sed vitae justo.", buttonName: "Buy Tickets"}
-            ]} />
-            {/* <!-- The Contact Section --> */}
-            <WForm />
+            {this._slidehow}
+            {this._pictureMosaic}
+            {this._toadsTracker}
+            {this._form}
         </div>
         );
+    }
+
+    private _setComponent(element: any): void {
+        switch(element.type) {
+            case WSlideShow:
+                this._slidehow = element as WSlideShow
+                break;
+            case PictureMosaic:
+                this._pictureMosaic = element as PictureMosaic;
+                break;
+            case ToadsTracker:
+                this._toadsTracker = element as ToadsTracker;
+                break;
+            case WForm:
+                this._form = element as WForm;
+                break;
+        }
     }
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface WPropertyBase {
-    children?: React.ReactNode[] | React.ReactNode;
+    children?: React.ReactElement[] | React.ReactElement;
 }
 
 export default WPropertyBase;

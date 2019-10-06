@@ -5,3 +5,5 @@ import ToadsTracker from '../Components/Sections/ToadsTracker';
 // import PictureMosaicProperty from './PictureMosaicProperty';
 
 export interface SectionPaneProperty extends WPropertyBase {} 
+
+export default SectionPaneProperty;
